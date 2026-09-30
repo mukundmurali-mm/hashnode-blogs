@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="-apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#8b949e"/>
+    </marker>
+    <style>
+      .box { rx: 12; }
+      .title { fill:#e6edf3; font-size:16px; font-weight:700; }
+      .sub { fill:#8b949e; font-size:12px; }
+      .tag { fill:#7ee787; font-size:11px; font-weight:600; }
+      .step { fill:#58a6ff; font-size:12px; font-weight:700; }
+      .flow { stroke:#8b949e; stroke-width:2; fill:none; }
+    </style>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#bg)"/>
+  <text x="40" y="52" fill="#e6edf3" font-size="24" font-weight="800">Nibblify — from a 4-hour video to a daily episode</text>
+  <text x="40" y="78" class="sub" font-size="13">Paste a URL → get logical, self-contained episodes → watch one a day</text>
+
+  <!-- Row 1: input + transcript -->
+  <g>
+    <rect x="40" y="110" width="200" height="90" rx="12" fill="#1f2937" stroke="#30363d"/>
+    <text x="60" y="140" class="step">1 · INPUT</text>
+    <text x="60" y="164" class="title">YouTube URL</text>
+    <text x="60" y="185" class="sub">Any tutorial / lecture / talk</text>
+  </g>
+
+  <g>
+    <rect x="300" y="110" width="230" height="90" rx="12" fill="#1f2937" stroke="#30363d"/>
+    <text x="320" y="140" class="step">2 · TRANSCRIPT</text>
+    <text x="320" y="164" class="title">youtube-transcript-api</text>
+    <text x="320" y="185" class="sub">English-first, falls back to any lang</text>
+  </g>
+
+  <g>
+    <rect x="590" y="110" width="370" height="90" rx="12" fill="#1f2937" stroke="#30363d"/>
+    <text x="610" y="140" class="step">3 · EPISODE INTELLIGENCE (pluggable)</text>
+    <text x="610" y="164" class="title">DeepSeek  ·  or local Ollama</text>
+    <text x="610" y="185" class="sub">OpenAI-compatible · picks logical seams, not fixed chunks</text>
+  </g>
+
+  <!-- arrows row1 -->
+  <path class="flow" d="M240,155 L298,155" marker-end="url(#arrow)"/>
+  <path class="flow" d="M530,155 L588,155" marker-end="url(#arrow)"/>
+
+  <!-- guardrail note -->
+  <g>
+    <rect x="590" y="220" width="370" height="70" rx="10" fill="#12261a" stroke="#238636"/>
+    <text x="610" y="246" class="tag">GUARDRAILS</text>
+    <text x="610" y="268" class="sub">Tolerant JSON parse (strict → {…} → […])</text>
+    <text x="610" y="284" class="sub">Force last episode end = true duration · 150k char cap</text>
+  </g>
+  <path class="flow" d="M775,200 L775,218" marker-end="url(#arrow)"/>
+
+  <!-- Row 2: store -->
+  <g>
+    <rect x="590" y="320" width="370" height="90" rx="12" fill="#1f2937" stroke="#30363d"/>
+    <text x="610" y="350" class="step">4 · STORE (local)</text>
+    <text x="610" y="374" class="title">FastAPI + SQLite (SQLAlchemy)</text>
+    <text x="610" y="395" class="sub">Video · Chunk (episode) · Note — stays on your machine</text>
+  </g>
+  <path class="flow" d="M775,290 L775,318" marker-end="url(#arrow)"/>
+
+  <!-- Row 3: player loop (bottom left) -->
+  <g>
+    <rect x="40" y="320" width="490" height="240" rx="12" fill="#161b22" stroke="#30363d"/>
+    <text x="60" y="350" class="step">5 · THE DAILY LOOP  (React · Vite · Tailwind · Electron)</text>
+
+    <rect x="64" y="368" width="200" height="70" rx="10" fill="#1f2937" stroke="#30363d"/>
+    <text x="80" y="398" class="title">Watch one episode</text>
+    <text x="80" y="418" class="sub">Auto-stops at boundary</text>
+
+    <rect x="300" y="368" width="200" height="70" rx="10" fill="#1f2937" stroke="#30363d"/>
+    <text x="316" y="398" class="title">Mark done</text>
+    <text x="316" y="418" class="sub">Progress bar advances</text>
+
+    <rect x="64" y="460" width="200" height="70" rx="10" fill="#1f2937" stroke="#30363d"/>
+    <text x="80" y="490" class="title">Timestamped notes</text>
+    <text x="80" y="510" class="sub">Jot &amp; jump-to</text>
+
+    <rect x="300" y="460" width="200" height="70" rx="10" fill="#1f2937" stroke="#30363d"/>
+    <text x="316" y="490" class="title">Come back tomorrow</text>
+    <text x="316" y="510" class="sub">One-a-day cadence</text>
+
+    <path class="flow" d="M264,403 L298,403" marker-end="url(#arrow)"/>
+    <path class="flow" d="M400,438 L400,458" marker-end="url(#arrow)"/>
+    <path class="flow" d="M300,495 L266,495" marker-end="url(#arrow)"/>
+    <path class="flow" d="M164,460 L164,440" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- store to loop arrow -->
+  <path class="flow" d="M590,410 C560,440 560,440 530,440" marker-end="url(#arrow)"/>
+
+  <text x="40" y="600" class="sub">The bet: shrink the unit + add a daily reason to return. Free-course completion sits at 5–15%; format, not content, is the lever.</text>
+</svg>
