@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="880" viewBox="0 0 1240 880" font-family="'JetBrains Mono','DejaVu Sans Mono',monospace">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="880" fill="#020617"/>
+  <rect width="1240" height="880" fill="url(#grid)"/>
+
+  <!-- Header -->
+  <circle cx="44" cy="46" r="6" fill="#34d399"/>
+  <text x="62" y="44" fill="#e2e8f0" font-size="26" font-weight="700">The Omarchy Stack</text>
+  <text x="62" y="68" fill="#94a3b8" font-size="14">An omakase desktop: every layer is a decision DHH already made for you</text>
+
+  <!-- Outcome banner (top) -->
+  <rect x="60" y="100" width="1120" height="62" rx="10" fill="#064e3b" fill-opacity="0.4" stroke="#34d399" stroke-width="1.5"/>
+  <text x="620" y="128" fill="#6ee7b7" font-size="16" font-weight="700" text-anchor="middle">A finished, keyboard-first desktop in minutes — not the 10–20 hours of manual Arch + Hyprland config</text>
+  <text x="620" y="150" fill="#94a3b8" font-size="12" text-anchor="middle">v4.0 "Quattro" · MIT-licensed · free · x86_64 / UEFI / Btrfs + Limine + LUKS</text>
+
+  <!-- Layer 5: Apps + AI agents (top of stack) -->
+  <rect x="200" y="196" width="840" height="86" rx="6" fill="#0f172a"/>
+  <rect x="200" y="196" width="840" height="86" rx="6" fill="#083344" fill-opacity="0.4" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="620" y="220" fill="#67e8f9" font-size="15" font-weight="700" text-anchor="middle">Curated toolchain &amp; the agent layer</text>
+  <text x="620" y="242" fill="#cbd5e1" font-size="11.5" text-anchor="middle">Neovim / LazyVim · Foot terminal · Chromium · Obsidian · LibreOffice · OBS · Docker via mise</text>
+  <text x="620" y="264" fill="#cbd5e1" font-size="11.5" text-anchor="middle">+ 10 pre-wired AI coding-agent CLIs with a usage panel — "a malleable OS for the age of agents"</text>
+
+  <!-- Layer 4: Omarchy config -->
+  <rect x="200" y="300" width="840" height="76" rx="6" fill="#0f172a"/>
+  <rect x="200" y="300" width="840" height="76" rx="6" fill="#4c1d95" fill-opacity="0.4" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="620" y="324" fill="#c4b5fd" font-size="15" font-weight="700" text-anchor="middle">Omarchy's opinionated config</text>
+  <text x="620" y="346" fill="#cbd5e1" font-size="11.5" text-anchor="middle">Super-key keybindings · 20+ themes · one command re-themes the entire system</text>
+  <text x="620" y="366" fill="#94a3b8" font-size="11" text-anchor="middle">This is the taste: sensible defaults codified so you don't rebuild them from scratch</text>
+
+  <!-- Layer 3: Quickshell -->
+  <rect x="200" y="394" width="840" height="60" rx="6" fill="#0f172a"/>
+  <rect x="200" y="394" width="840" height="60" rx="6" fill="#78350f" fill-opacity="0.35" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="620" y="418" fill="#fcd34d" font-size="15" font-weight="700" text-anchor="middle">Quickshell</text>
+  <text x="620" y="438" fill="#cbd5e1" font-size="11.5" text-anchor="middle">Status bar, menus, and on-screen UI shell</text>
+
+  <!-- Layer 2: Hyprland / Wayland -->
+  <rect x="200" y="472" width="840" height="60" rx="6" fill="#0f172a"/>
+  <rect x="200" y="472" width="840" height="60" rx="6" fill="#883155" fill-opacity="0.4" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="620" y="496" fill="#fda4af" font-size="15" font-weight="700" text-anchor="middle">Hyprland (Wayland tiling compositor)</text>
+  <text x="620" y="516" fill="#cbd5e1" font-size="11.5" text-anchor="middle">Dynamic tiling, animations — normally "Linux on hard mode" to configure</text>
+
+  <!-- Layer 1: Arch base -->
+  <rect x="200" y="550" width="840" height="60" rx="6" fill="#0f172a"/>
+  <rect x="200" y="550" width="840" height="60" rx="6" fill="#1e293b" fill-opacity="0.6" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="620" y="574" fill="#e2e8f0" font-size="15" font-weight="700" text-anchor="middle">Arch Linux — rolling release + AUR</text>
+  <text x="620" y="594" fill="#cbd5e1" font-size="11.5" text-anchor="middle">Chosen for always-latest packages; the reason DHH moved from Omakub (Ubuntu) to Arch</text>
+
+  <!-- vertical connective arrow -->
+  <line x1="130" y1="600" x2="130" y2="206" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="112" y="410" fill="#64748b" font-size="11" text-anchor="middle" transform="rotate(-90 112 410)">opinion stacks upward</text>
+
+  <!-- Reality-check callouts (bottom) -->
+  <rect x="60" y="648" width="545" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <circle cx="82" cy="676" r="5" fill="#fbbf24"/>
+  <text x="96" y="681" fill="#e2e8f0" font-size="14" font-weight="700">"Runs on any old laptop" — reality check</text>
+  <text x="80" y="708" fill="#cbd5e1" font-size="11.5">• No official minimum spec is published.</text>
+  <text x="80" y="730" fill="#cbd5e1" font-size="11.5">• Only concrete demo: a 2011 ThinkPad X220, 2GB RAM.</text>
+  <text x="80" y="752" fill="#cbd5e1" font-size="11.5">• Reasoned practitioner floor: ~4GB RAM, 8GB+ with</text>
+  <text x="92" y="770" fill="#cbd5e1" font-size="11.5">Docker / AI agents. Lighter than GNOME/KDE, not magic.</text>
+
+  <rect x="635" y="648" width="545" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <circle cx="657" cy="676" r="5" fill="#34d399"/>
+  <text x="671" y="681" fill="#e2e8f0" font-size="14" font-weight="700">"Installs in under 5 minutes" — reality check</text>
+  <text x="655" y="708" fill="#cbd5e1" font-size="11.5">• The automated installer genuinely IS fast and hands-off.</text>
+  <text x="655" y="730" fill="#cbd5e1" font-size="11.5">• Sub-5-min figures come from DHH's own site, not</text>
+  <text x="667" y="748" fill="#cbd5e1" font-size="11.5">independent benchmarks.</text>
+  <text x="655" y="770" fill="#cbd5e1" font-size="11.5">• Real end-to-end (downloads, fonts): ~15–30 minutes.</text>
+
+  <text x="620" y="836" fill="#475569" font-size="11" text-anchor="middle">Source: omarchy.org · world.hey.com/dhh · Omarchy GitHub · community reviews (2025–2026). Marketing claims hedged per research.</text>
+</svg>
