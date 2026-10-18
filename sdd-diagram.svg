@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="stage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f6feb"/>
+      <stop offset="1" stop-color="#1550b8"/>
+    </linearGradient>
+    <linearGradient id="codegrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2ea043"/>
+      <stop offset="1" stop-color="#1f7a33"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8b949e"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="80" y="90" fill="#e6edf3" font-size="46" font-weight="700">Spec-Driven Development: the pipeline</text>
+  <text x="80" y="134" fill="#8b949e" font-size="24">A spec sits between human intent and generated code — and a human gate sits between every stage.</text>
+
+  <!-- Pipeline stages -->
+  <!-- coordinates -->
+  <!-- Stage boxes centered on y=340 -->
+  <g>
+    <!-- Intent -->
+    <rect x="70" y="270" width="240" height="140" rx="16" fill="#21262d" stroke="#30363d" stroke-width="2"/>
+    <text x="190" y="330" fill="#e6edf3" font-size="30" font-weight="700" text-anchor="middle">Intent</text>
+    <text x="190" y="366" fill="#8b949e" font-size="19" text-anchor="middle">What &amp; why,</text>
+    <text x="190" y="390" fill="#8b949e" font-size="19" text-anchor="middle">from the human</text>
+
+    <!-- Spec -->
+    <rect x="390" y="270" width="240" height="140" rx="16" fill="url(#stage)" stroke="#58a6ff" stroke-width="2"/>
+    <text x="510" y="330" fill="#ffffff" font-size="30" font-weight="700" text-anchor="middle">Spec</text>
+    <text x="510" y="366" fill="#dbeafe" font-size="19" text-anchor="middle">Testable criteria,</text>
+    <text x="510" y="390" fill="#dbeafe" font-size="19" text-anchor="middle">in the repo</text>
+
+    <!-- Plan -->
+    <rect x="710" y="270" width="240" height="140" rx="16" fill="#21262d" stroke="#30363d" stroke-width="2"/>
+    <text x="830" y="330" fill="#e6edf3" font-size="30" font-weight="700" text-anchor="middle">Plan</text>
+    <text x="830" y="366" fill="#8b949e" font-size="19" text-anchor="middle">Technical</text>
+    <text x="830" y="390" fill="#8b949e" font-size="19" text-anchor="middle">approach</text>
+
+    <!-- Tasks -->
+    <rect x="1030" y="270" width="240" height="140" rx="16" fill="#21262d" stroke="#30363d" stroke-width="2"/>
+    <text x="1150" y="330" fill="#e6edf3" font-size="30" font-weight="700" text-anchor="middle">Tasks</text>
+    <text x="1150" y="366" fill="#8b949e" font-size="19" text-anchor="middle">Scoped,</text>
+    <text x="1150" y="390" fill="#8b949e" font-size="19" text-anchor="middle">reviewable units</text>
+
+    <!-- Code -->
+    <rect x="1350" y="270" width="180" height="140" rx="16" fill="url(#codegrad)" stroke="#3fb950" stroke-width="2"/>
+    <text x="1440" y="330" fill="#ffffff" font-size="30" font-weight="700" text-anchor="middle">Code</text>
+    <text x="1440" y="366" fill="#d7f5dd" font-size="19" text-anchor="middle">Generated &amp;</text>
+    <text x="1440" y="390" fill="#d7f5dd" font-size="19" text-anchor="middle">validated</text>
+  </g>
+
+  <!-- Arrows between stages -->
+  <g stroke="#8b949e" stroke-width="3" fill="none">
+    <line x1="312" y1="340" x2="386" y2="340" marker-end="url(#arrow)"/>
+    <line x1="632" y1="340" x2="706" y2="340" marker-end="url(#arrow)"/>
+    <line x1="952" y1="340" x2="1026" y2="340" marker-end="url(#arrow)"/>
+    <line x1="1272" y1="340" x2="1346" y2="340" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Human review gates: small lock/check badges on each arrow -->
+  <g>
+    <g transform="translate(349,340)">
+      <circle r="18" fill="#161b22" stroke="#f0883e" stroke-width="2.5"/>
+      <text x="0" y="7" text-anchor="middle" font-size="22" fill="#f0883e">✓</text>
+    </g>
+    <g transform="translate(669,340)">
+      <circle r="18" fill="#161b22" stroke="#f0883e" stroke-width="2.5"/>
+      <text x="0" y="7" text-anchor="middle" font-size="22" fill="#f0883e">✓</text>
+    </g>
+    <g transform="translate(989,340)">
+      <circle r="18" fill="#161b22" stroke="#f0883e" stroke-width="2.5"/>
+      <text x="0" y="7" text-anchor="middle" font-size="22" fill="#f0883e">✓</text>
+    </g>
+    <g transform="translate(1309,340)">
+      <circle r="18" fill="#161b22" stroke="#f0883e" stroke-width="2.5"/>
+      <text x="0" y="7" text-anchor="middle" font-size="22" fill="#f0883e">✓</text>
+    </g>
+  </g>
+  <text x="800" y="470" fill="#f0883e" font-size="21" text-anchor="middle" font-weight="600">↑ human review gate between every stage — remove these and you&#39;re back to vibe coding</text>
+
+  <!-- Bottom contrast band: PRD vs SDD -->
+  <g>
+    <rect x="70" y="560" width="700" height="250" rx="16" fill="#1a1f26" stroke="#30363d" stroke-width="2"/>
+    <text x="100" y="608" fill="#8b949e" font-size="26" font-weight="700">Classic PRD</text>
+    <text x="100" y="652" fill="#c9d1d9" font-size="21">• Prose a human reads and decompresses</text>
+    <text x="100" y="688" fill="#c9d1d9" font-size="21">• Lives in Confluence / Notion / a doc</text>
+    <text x="100" y="724" fill="#c9d1d9" font-size="21">• Written once, drifts, quietly abandoned</text>
+    <text x="100" y="760" fill="#c9d1d9" font-size="21">• Gaps filled later, by engineer judgment</text>
+    <text x="100" y="796" fill="#c9d1d9" font-size="21">• Success: "roughly the right thing?"</text>
+
+    <rect x="830" y="560" width="700" height="250" rx="16" fill="#12241a" stroke="#2ea043" stroke-width="2"/>
+    <text x="860" y="608" fill="#3fb950" font-size="26" font-weight="700">Spec-driven spec</text>
+    <text x="860" y="652" fill="#c9d1d9" font-size="21">• Structured, testable criteria (often EARS)</text>
+    <text x="860" y="688" fill="#c9d1d9" font-size="21">• Lives in the repo, under version control</text>
+    <text x="860" y="724" fill="#c9d1d9" font-size="21">• Versioned, diffed in PRs, re-read each run</text>
+    <text x="860" y="760" fill="#c9d1d9" font-size="21">• Gaps resolved up front — or the agent guesses</text>
+    <text x="860" y="796" fill="#c9d1d9" font-size="21">• Success: "does it satisfy the spec's criteria?"</text>
+  </g>
+
+  <text x="1530" y="870" fill="#484f58" font-size="18" text-anchor="end">mukundmurali.in/blog</text>
+</svg>
