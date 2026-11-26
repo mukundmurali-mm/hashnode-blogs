@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: "Hashnode blogs"
+  structure:
+    - type: space
+      key: space-hashnode-blogs
+      title: "Hashnode blogs"
+      path: blogs
+      default: true
+      content:
+        directory: ./
